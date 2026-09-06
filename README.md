@@ -9,6 +9,69 @@ The workflow followed throughout the project was:
 Requirement → Test Case → Test Execution → PASS/FAIL → Bug Report → Retesting
 ```
 
+## Testing Objective
+To verify that the main functionalities of the SauceDemo web application work correctly and meet the expected behavior from an end-user perspective — identifying functional defects, validating user interactions, and ensuring correct behavior under different user scenarios.
+
+## Test Case ID Naming Convention
+| Prefix | Area |
+|---|---|
+| `TC-LOGIN-XXX` | Authentication / Login |
+| `TC-PROD-XXX` | Product Display & Information |
+| `TC-SORT-XXX` | Product Sorting |
+| `TC-CART-XXX` | Shopping Cart |
+| `TC-CHECKOUT-XXX` | Checkout |
+| `TC-LOGOUT-XXX` | Logout / Session |
+
+## Entry Criteria
+Testing begins when:
+- The application is accessible.
+- Required test accounts are available.
+- The test environment is ready.
+- Test cases have been prepared.
+- Required test data is available.
+
+## Exit Criteria
+Testing is considered complete when:
+- Planned test cases have been executed.
+- PASS / FAIL / BLOCKED results have been recorded.
+- Failed test cases have corresponding bug reports where applicable.
+- Bugs have been documented and linked to their relevant test cases.
+- Critical functionality has been verified.
+- Final test execution results have been documented.
+
+## Defect Management Process
+```
+Execute Test Case
+       ↓
+Actual Result ≠ Expected Result
+       ↓
+Test Case = FAIL
+       ↓
+Investigate the issue
+       ↓
+Create Bug Report in Jira
+       ↓
+Link Bug to related Test Case
+       ↓
+Retest after fix
+       ↓
+PASS / FAIL
+```
+
+## Test Execution Strategy
+Testing was performed in stages:
+
+| Phase | Focus |
+|---|---|
+| 1 — Authentication | Verify login and access behavior |
+| 2 — Product Testing | Verify product display, information, details, and sorting |
+| 3 — Shopping Cart | Verify adding, removing, and managing products in the cart |
+| 4 — Problem Users | Re-run selected scenarios with `problem_user` to surface defects not visible with `standard_user` |
+| 5 — Bug Reporting | Document failed scenarios in Jira and link them to their test cases |
+| 6 — Checkout | Verify the complete checkout and order process |
+| 7 — Logout | Verify logout and session behavior |
+| 8 — Final Regression | Re-verify affected areas and finalize results |
+
 ## Testing Scope
 - Login / Authentication
 - Product Display & Information
@@ -98,3 +161,4 @@ SauceDemo-QA-Testing/
 
 ## Author
 Hala — QA Testing Portfolio Project
+
